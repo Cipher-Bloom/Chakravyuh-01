@@ -1,0 +1,4 @@
+/login                (Status: 200) [Size: 3228]
+/about                (Status: 200) [Size: 3134]
+/robots.txt           (Status: 200) [Size: 31]
+/healthz              (Status: 200) [Size: 15]

@@ -1,0 +1,225 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_tests
+V:Sat Sep 26 18:15:25 2026 - Loaded "Nikto Tests" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_strutshock
+V:Sat Sep 26 18:15:25 2026 - Loaded "strutshock" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_ssl
+V:Sat Sep 26 18:15:25 2026 - Loaded "SSL and cert checks" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_sitefiles
+V:Sat Sep 26 18:15:25 2026 - Loaded "Site Files" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_siebel
+V:Sat Sep 26 18:15:25 2026 - Loaded "Siebel Checks" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_shellshock
+V:Sat Sep 26 18:15:25 2026 - Loaded "shellshock" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_robots
+V:Sat Sep 26 18:15:25 2026 - Loaded "Robots" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_xml
+V:Sat Sep 26 18:15:25 2026 - Loaded "Report as XML" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_text
+V:Sat Sep 26 18:15:25 2026 - Loaded "Text reports" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_sqlg
+V:Sat Sep 26 18:15:25 2026 - Loaded "Generic SQL reports" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_nbe
+V:Sat Sep 26 18:15:25 2026 - Loaded "NBE reports" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_json
+V:Sat Sep 26 18:15:25 2026 - Loaded "JSON reports" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_html
+V:Sat Sep 26 18:15:25 2026 - Loaded "Report as HTML" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_report_csv
+V:Sat Sep 26 18:15:25 2026 - Loaded "CSV reports" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_put_del_test
+V:Sat Sep 26 18:15:25 2026 - Loaded "Put/Delete test" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_paths
+V:Sat Sep 26 18:15:25 2026 - Loaded "Path Search" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_parked
+V:Sat Sep 26 18:15:25 2026 - Loaded "Parked Detection" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_outdated
+V:Sat Sep 26 18:15:25 2026 - Loaded "Outdated" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_origin_reflection
+V:Sat Sep 26 18:15:25 2026 - Loaded "CORS Origin Reflection" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_negotiate
+V:Sat Sep 26 18:15:25 2026 - Loaded "Negotiate" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_multiple_index
+V:Sat Sep 26 18:15:25 2026 - Loaded "Multiple Index" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_msgs
+V:Sat Sep 26 18:15:25 2026 - Loaded "Server Messages" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_ms10_070
+V:Sat Sep 26 18:15:25 2026 - Loaded "ms10-070 Check" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_httpoptions
+V:Sat Sep 26 18:15:25 2026 - Loaded "HTTP Options" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_headers
+V:Sat Sep 26 18:15:25 2026 - Loaded "HTTP Headers" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_fileops
+V:Sat Sep 26 18:15:25 2026 - Loaded "File Operations" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_favicon
+V:Sat Sep 26 18:15:25 2026 - Loaded "Favicon" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_embedded
+V:Sat Sep 26 18:15:25 2026 - Loaded "Embedded Detection" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_drupal
+V:Sat Sep 26 18:15:25 2026 - Loaded "Drupal Specific Tests" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_domino
+V:Sat Sep 26 18:15:25 2026 - Loaded "IBM/Lotus Domino Specific Tests" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_docker_registry
+V:Sat Sep 26 18:15:25 2026 - Loaded "docker_registry" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_dishwasher
+V:Sat Sep 26 18:15:25 2026 - Loaded "dishwasher" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_dictionary_attack
+V:Sat Sep 26 18:15:25 2026 - Loaded "Dictionary attack" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_core
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_cookies
+V:Sat Sep 26 18:15:25 2026 - Loaded "HTTP Cookie Internal IP" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_content_search
+V:Sat Sep 26 18:15:25 2026 - Loaded "Content Search" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_clientaccesspolicy
+V:Sat Sep 26 18:15:25 2026 - Loaded "clientaccesspolicy.xml" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_cgi
+V:Sat Sep 26 18:15:25 2026 - Loaded "CGI" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_auth
+V:Sat Sep 26 18:15:25 2026 - Loaded "Test Authentication" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_apacheusers
+V:Sat Sep 26 18:15:25 2026 - Loaded "Apache Users" plugin.
+V:Sat Sep 26 18:15:25 2026 - Initialising plugin nikto_apache_expect_xss
+V:Sat Sep 26 18:15:25 2026 - Loaded "Apache Expect XSS" plugin.
+V:Sat Sep 26 18:15:25 2026 - Getting targets
+V:Sat Sep 26 18:15:25 2026 - Opening reports (none, )
+V:Sat Sep 26 18:15:25 2026 - 6951 server checks loaded
+V:Sat Sep 26 18:15:25 2026 - Running start for "HTTP Headers" plugin
+V:Sat Sep 26 18:15:25 2026 - Running start for "Favicon" plugin
+V:Sat Sep 26 18:15:25 2026 - Running start for "Drupal Specific Tests" plugin
+V:Sat Sep 26 18:15:25 2026 - Running start for "IBM/Lotus Domino Specific Tests" plugin
+V:Sat Sep 26 18:15:25 2026 - Running start for "Content Search" plugin
+V:Sat Sep 26 18:15:25 2026 - Running start for "Test Authentication" plugin
+V:Sat Sep 26 18:15:25 2026 - Checking for HTTP on 127.0.0.1:8000, using GET
+V:Sat Sep 26 18:15:25 2026 - 200 for GET:	/
+V:Sat Sep 26 18:15:25 2026 - 200 for GET:	/
++ Target IP:          127.0.0.1
++ Target Hostname:    127.0.0.1
++ Target Port:        8000
++ Start Time:         2026-09-26 18:15:25 (GMT0)
+---------------------------------------------------------------------------
++ Server: uvicorn
+V:Sat Sep 26 18:15:25 2026 - 200 for GET:	/
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.jse
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.jse
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.bak
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.bak
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.php4
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.php4
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.inc+
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.inc+
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.csc
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.csc
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.www_acl
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.www_acl
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.csp
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.csp
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.eml
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.eml
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.cgi+
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.cgi+
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.php#
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.php#
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.pl
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.pl
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.jsp+
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.jsp+
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.shm
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.shm
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.pw
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.pw
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.xtp
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.xtp
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.jsp
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.jsp
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.ashx
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.ashx
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.shtm
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.shtm
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.exe|dir
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.exe|dir
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.LCDispatcher
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.LCDispatcher
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.ee
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.ee
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR._
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR._
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.et
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.et
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.markdown
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.markdown
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.cfm
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.cfm
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.htw
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.htw
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.inc
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.inc
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.iso8859-2
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.iso8859-2
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.xsql
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.xsql
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.asmx
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.asmx
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.cgi
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.cgi
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.htpasswd
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.htpasswd
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.bakup
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.bakup
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.com
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.com
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.log
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.log
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.nlm
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.nlm
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.JSP
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.JSP
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.exe
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.exe
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.py
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.py
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.xml+
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.xml+
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.js
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.js
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.dat
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.dat
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.settings
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.settings
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.utf8
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.utf8
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.xml
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.xml
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.wwwacl
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.wwwacl
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.exp
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.exp
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.jsa
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.jsa
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.htaccess~
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.htaccess~
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.old
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.old
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.iso-ru
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.iso-ru
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.genpopuplist
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.genpopuplist
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.cp-1251
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.cp-1251
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.properties
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.properties
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.cs
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.cs
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.chl+
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.chl+
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.lock
+V:Sat Sep 26 18:15:25 2026 - 404 for GET:	/gQQba9IR.lock
+V:Sat Sep 26 18:15:25 2026 - Testing error for file: /gQQba9IR.sql
+V:Sat Sep 26 18:16:25 2026 -  for GET:	
+V:Sat Sep 26 18:16:25 2026 - OK/OTHER type settled on: HASH
+V:Sat Sep 26 18:16:25 2026 - Testing error for file: /gQQba9IR.ncf
++ ERROR: Host maximum execution time of 25 seconds reached

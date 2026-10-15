@@ -1,0 +1,17 @@
+# Scrape the process on the host. python main.py is not in this compose
+# network, and it must stay one worker. Do not add a second target that
+# points at another worker: the session store is process-local.
+global:
+  scrape_interval: 5s
+  scrape_timeout: 3s
+
+scrape_configs:
+  - job_name: chakravyuh
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["host.docker.internal:8000"]
+    # If CHAKRAVYUH_DASHBOARD_TOKEN is set, the scrape will 401 until this
+    # is uncommented and the file contains the token and nothing else.
+    # authorization:
+    #   type: Bearer
+    #   credentials_file: /etc/prometheus/token

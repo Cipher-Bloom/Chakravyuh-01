@@ -1,0 +1,80 @@
+clamping limit_concurrency from 2048 to 960 because nofile soft limit is 1024
+2026-09-26 18:15:25,263 INFO chakravyuh console http://0.0.0.0:8000/chakravyuh-dashboard
+2026-09-26 18:15:25,263 INFO chakravyuh protected application http://0.0.0.0:8000/
+2026-09-26 18:15:25,266 INFO chakravyuh nofile soft=1024 hard=524288 tarpit_cap=500 headroom_after_tarpits=524
+2026-09-26 18:15:25,266 INFO chakravyuh ready threshold=0.70 tarpit=30s concurrent_cap=500 trusted_proxies=none (X-Forwarded-For ignored)
+INFO:     Started server process [2621]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:48722 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.jse HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.bak HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.php4 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.inc%2B HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.csc HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.www_acl HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.csp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.eml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.cgi%2B HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.php HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.pl HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.jsp%2B HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.shm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.pw HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR. HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.xtp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.jsp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.ashx HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.shtm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.exe%7Cdir HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.LCDispatcher HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.ee HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR._ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.et HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.markdown HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.cfm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.htw HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.inc HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.iso8859-2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.xsql HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.asmx HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.cgi HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.htpasswd HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.bakup HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.com HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.log HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.nlm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.JSP HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.exe HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.py HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.xml%2B HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.dat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.settings HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.utf8 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.xml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.wwwacl HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.exp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.jsa HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.htaccess~ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.old HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.iso-ru HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.genpopuplist HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.cp-1251 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.properties HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.cs HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.chl%2B HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.lock HTTP/1.1" 404 Not Found
+2026-09-26 18:15:25,713 INFO chakravyuh.middleware threshold crossed ip=127.0.0.1 score=0.700 profile=nginx path=/gQQba9IR.sql
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.sql HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.sql HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.ncf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48722 - "GET /gQQba9IR.ncf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41618 - "GET /admin999 HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2621]

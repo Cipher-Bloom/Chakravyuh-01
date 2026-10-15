@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sessions</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0e1116; color: #e6e8eb; font: 12px/1.35 ui-monospace, monospace; }
+  .bar { height: 28px; padding: 6px 10px; color: #8b929c; border-bottom: 1px solid #232830; white-space: nowrap; overflow: hidden; }
+  main { height: calc(100% - 28px); display: grid; grid-template-rows: 1.3fr 1fr 0.8fr; gap: 8px; padding: 8px; }
+  section { background: #161a20; border: 1px solid #232830; min-height: 0; display: flex; flex-direction: column; }
+  h2 { margin: 0; padding: 4px 8px; color: #8b929c; font: 11px/1.4 ui-monospace, monospace; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; border-bottom: 1px solid #232830; }
+  .scroll { overflow: auto; min-height: 0; flex: 1; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 2px 8px; text-align: left; border-bottom: 1px solid #232830; white-space: nowrap; font-weight: 400; }
+  th { position: sticky; top: 0; background: #161a20; color: #8b929c; }
+  #sessions th { cursor: pointer; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.sel td:first-child { box-shadow: inset 2px 0 #4a93e0; }
+  td.path { max-width: 28rem; overflow: hidden; text-overflow: ellipsis; }
+  .empty { color: #8b929c; }
+</style>
+</head>
+<body>
+<div class="bar" id="bar">disconnected · sessions — · tarpits — · rss — · last update —</div>
+<main>
+  <section>
+    <h2 id="sessions-label">sessions</h2>
+    <div class="scroll">
+      <table id="sessions">
+        <thead><tr>
+          <th data-k="ip" data-label="IP">IP</th>
+          <th data-k="score" class="num" data-label="S">S</th>
+          <th data-k="r" class="num" data-label="R">R</th>
+          <th data-k="d" class="num" data-label="D">D</th>
+          <th data-k="h" class="num" data-label="H">H</th>
+          <th data-k="c" class="num" data-label="C">C</th>
+          <th data-k="action" data-label="action">action</th>
+          <th data-k="age" class="num" data-label="age">age</th>
+          <th data-k="path" data-label="path">path</th>
+        </tr></thead>
+        <tbody><tr><td class="empty" colspan="9">No sessions.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+  <section>
+    <h2>decisions</h2>
+    <div class="scroll">
+      <table id="feed">
+        <thead><tr>
+          <th>time</th><th>IP</th><th>action</th><th class="num">status</th><th class="num">S</th><th>path</th>
+        </tr></thead>
+        <tbody><tr><td class="empty" colspan="6">No decisions.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+  <section>
+    <h2>tarpits</h2>
+    <div class="scroll">
+      <table id="tarpits">
+        <thead><tr>
+          <th>IP</th><th>profile</th><th class="num">held</th><th>path</th>
+        </tr></thead>
+        <tbody><tr><td class="empty" colspan="4">No tarpits.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script>
+(function () {
+  var bar = document.getElementById("bar");
+  var sessionTable = document.getElementById("sessions");
+  var selected = "";
+  var sortKey = "score";
+  var sortDir = -1;
+  var last = null;
+  var token = new URLSearchParams(location.search).get("token") || "";
+
+  function esc(value) {
+    return String(value == null ? "" : value).replace(/[&<>"]/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[ch];
+    });
+  }
+
+  function stamp(unix) {
+    var date = new Date(Number(unix) * 1000);
+    if (!Number.isFinite(date.getTime())) return "—";
+    function pad(n) { return String(n).padStart(2, "0"); }
+    return pad(date.getUTCHours()) + ":" + pad(date.getUTCMinutes()) + ":" + pad(date.getUTCSeconds()) + "Z";
+  }
+
+  function rss(bytes) {
+    var n = Number(bytes);
+    if (!Number.isFinite(n) || n <= 0) return "—";
+    return (n / 1048576).toFixed(1) + " MB";
+  }
+
+  function age(seconds) {
+    var n = Number(seconds);
+    if (!Number.isFinite(n) || n < 0) return "—";
+    if (n < 60) return Math.round(n) + "s";
+    if (n < 3600) return Math.floor(n / 60) + "m";
+    return Math.floor(n / 3600) + "h";
+  }
+
+  function num(value) {
+    var n = Number(value);
+    return Number.isFinite(n) ? n.toFixed(4) : "—";
+  }
+
+  function actionOf(id, feed) {
+    if (!id) return "—";
+    for (var i = 0; i < feed.length; i++) {
+      if (feed[i].id === id && feed[i].action) return feed[i].action;
+    }
+    return "—";
+  }
+
+  function setBar(state, data) {
+    var global = data && data.global ? data.global : null;
+    var sessions = global && Number.isFinite(Number(global.tracked_sessions)) ? global.tracked_sessions : "—";
+    var active = global ? Number(global.active_tarpits) : NaN;
+    var cap = global ? Number(global.max_tarpits) : NaN;
+    var tarpits = Number.isFinite(active) && Number.isFinite(cap) ? active + "/" + cap : "—";
+    var memory = global ? rss(global.rss_bytes) : "—";
+    var when = data && data.now ? stamp(data.now) : "—";
+    bar.textContent = state + " · sessions " + sessions + " · tarpits " + tarpits + " · rss " + memory + " · last update " + when;
+  }
+
+  function decorate(list, feed) {
+    return list.map(function (row) {
+      return {
+        ip: row.ip || "",
+        id: row.id || "",
+        score: Number(row.score) || 0,
+        r: Number(row.r) || 0,
+        d: Number(row.d) || 0,
+        h: Number(row.h) || 0,
+        c: Number(row.c) || 0,
+        action: actionOf(row.id, feed),
+        age: Number(row.age_s) || 0,
+        path: row.last_path || ""
+      };
+    });
+  }
+
+  function compare(a, b) {
+    var left = a[sortKey];
+    var right = b[sortKey];
+    var order = typeof left === "number" || typeof right === "number"
+      ? (Number(left) || 0) - (Number(right) || 0)
+      : String(left).localeCompare(String(right));
+    return sortDir < 0 ? -order : order;
+  }
+
+  function paint() {
+    var data = last || {};
+    var feed = Array.isArray(data.feed) ? data.feed : [];
+    var sessions = decorate(Array.isArray(data.sessions) ? data.sessions : [], feed).sort(compare);
+    var tarpits = Array.isArray(data.tarpits) ? data.tarpits : [];
+    var heads = sessionTable.querySelectorAll("th");
+    for (var i = 0; i < heads.length; i++) {
+      var key = heads[i].getAttribute("data-k");
+      var mark = key === sortKey ? (sortDir < 0 ? " ↓" : " ↑") : "";
+      heads[i].textContent = heads[i].getAttribute("data-label") + mark;
+    }
+    var shown = sessions.length;
+    var tracked = data.global ? Number(data.global.tracked_sessions) : shown;
+    document.getElementById("sessions-label").textContent = tracked > shown ? "sessions · " + shown + " of " + tracked : "sessions";
+    sessionTable.tBodies[0].innerHTML = sessions.length ? sessions.map(function (row) {
+      var cls = row.id && row.id === selected ? " class=\"sel\"" : "";
+      return "<tr" + cls + " data-id=\"" + esc(row.id) + "\">" +
+        "<td>" + esc(row.ip) + "</td>" +
+        "<td class=\"num\">" + num(row.score) + "</td>" +
+        "<td class=\"num\">" + num(row.r) + "</td>" +
+        "<td class=\"num\">" + num(row.d) + "</td>" +
+        "<td class=\"num\">" + num(row.h) + "</td>" +
+        "<td class=\"num\">" + num(row.c) + "</td>" +
+        "<td>" + esc(row.action) + "</td>" +
+        "<td class=\"num\">" + esc(age(row.age)) + "</td>" +
+        "<td class=\"path\" title=\"" + esc(row.path) + "\">" + esc(row.path) + "</td></tr>";
+    }).join("") : "<tr><td class=\"empty\" colspan=\"9\">No sessions.</td></tr>";
+    document.querySelector("#feed tbody").innerHTML = feed.length ? feed.map(function (row) {
+      return "<tr><td>" + esc(stamp(row.ts)) + "</td><td>" + esc(row.ip) + "</td><td>" + esc(row.action) + "</td>" +
+        "<td class=\"num\">" + esc(row.status) + "</td><td class=\"num\">" + num(row.score) + "</td>" +
+        "<td class=\"path\" title=\"" + esc(row.path) + "\">" + esc(row.path) + "</td></tr>";
+    }).join("") : "<tr><td class=\"empty\" colspan=\"6\">No decisions.</td></tr>";
+    document.querySelector("#tarpits tbody").innerHTML = tarpits.length ? tarpits.map(function (row) {
+      var held = Number(row.duration_s);
+      return "<tr><td>" + esc(row.ip) + "</td><td>" + esc(row.profile) + "</td><td class=\"num\">" +
+        (Number.isFinite(held) ? held.toFixed(1) + "s" : "—") + "</td>" +
+        "<td class=\"path\" title=\"" + esc(row.path) + "\">" + esc(row.path) + "</td></tr>";
+    }).join("") : "<tr><td class=\"empty\" colspan=\"4\">No tarpits.</td></tr>";
+  }
+
+  function poll() {
+    var query = token ? "?token=" + encodeURIComponent(token) : "";
+    fetch("/chakravyuh-dashboard/api/snapshot" + query, { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) throw new Error(String(response.status));
+        return response.json();
+      })
+      .then(function (data) {
+        last = data;
+        setBar("connected", data);
+        paint();
+      })
+      .catch(function () {
+        setBar("disconnected", last);
+      });
+  }
+
+  sessionTable.addEventListener("click", function (event) {
+    var header = event.target.closest("th");
+    if (header && header.getAttribute("data-k")) {
+      var key = header.getAttribute("data-k");
+      if (key === sortKey) sortDir = -sortDir;
+      else { sortKey = key; sortDir = key === "ip" || key === "path" || key === "action" ? 1 : -1; }
+      paint();
+      return;
+    }
+    var row = event.target.closest("tr");
+    if (row && row.dataset.id) {
+      selected = row.dataset.id;
+      paint();
+    }
+  });
+
+  setInterval(poll, 3000);
+  poll();
+})();
+</script>
+</body>
+</html>

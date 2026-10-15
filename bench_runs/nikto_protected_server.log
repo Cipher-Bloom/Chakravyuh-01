@@ -1,0 +1,85 @@
+clamping limit_concurrency from 2048 to 960 because nofile soft limit is 1024
+2026-09-26 18:11:29,583 INFO chakravyuh console http://127.0.0.1:8000/chakravyuh-dashboard
+2026-09-26 18:11:29,584 INFO chakravyuh protected application http://127.0.0.1:8000/
+2026-09-26 18:11:29,586 INFO chakravyuh nofile soft=1024 hard=524288 tarpit_cap=500 headroom_after_tarpits=524
+2026-09-26 18:11:29,586 INFO chakravyuh ready threshold=0.70 tarpit=30s concurrent_cap=500 trusted_proxies=none (X-Forwarded-For ignored)
+INFO:     Started server process [2578]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:60028 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.html HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cfm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.md HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.dbc HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.aspx HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.TXT HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.csp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.pl HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cfc HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.php HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.1 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.markdown HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.phpp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.exe HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cwr HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.txt HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.htm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cfg HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.dat HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.gif HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.log HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.idc HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.lic HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.zip HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.xml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cnf HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.eml HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /.ks70IofU HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.cgi HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.ida HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.MVC HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.bas HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.5-mysqlphp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.dll HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.xslt HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.grp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.jsp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.js HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.pm HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.asmx HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.xsl HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.asp HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.do HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.config HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ks70IofU.mediawiki HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /index.php HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /cgi.cgi/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /webcgi/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /cgi-914/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /cgi-915/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /bin/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /cgi/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /mpcgi/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /cgi-bin/ HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60044 - "GET /ows-bin/ HTTP/1.1" 404 Not Found
+2026-09-26 18:11:32,030 INFO chakravyuh.middleware threshold crossed ip=127.0.0.1 score=0.700 profile=nginx path=/cgi-sys/
+INFO:     127.0.0.1:60044 - "GET /cgi-sys/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET /cgi-sys/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET /cgi-local/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60044 - "GET /cgi-local/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55550 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55550 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2578]
